@@ -13,9 +13,9 @@ function App() {
 
   return (
 
-    <div className="w-full h-screen flex justify-center items-center font-semibold">
-      <div className="w-[90%] sm:w-[450px] mt-10 bg-blue-950 rounded-xl ">
-        <div className="w-5/6 m-3 mx-auto mt-10 bg-slate-900 text-white rounded-md ">
+    <div className="w-full h-screen flex justify-center items-center font-semibold ">
+      <div className="w-[90%] sm:w-[450px] mt-10 bg-blue-950 rounded-xl relative">
+        <div className="w-5/6 m-3 mx-auto mt-12 bg-slate-900 text-white rounded-md ">
           <h2 className="w-full p-4 text-2xl text-end">
             {" "}
             {result === "" ? "0" : result}
@@ -158,6 +158,22 @@ function App() {
               setresult((prev) => (prev += "+"))
             }}
           />
+          
+        </div>
+        <div className="absolute bottom-9 w-16 flex justify-center items-center right-12 text-white bg-gray-900 p-2">
+          <input type="button" name="" id="" 
+            value={"clear"}
+            onClick={()=>{
+              setresult("")
+            }}/>
+        </div>
+        <div className="w-full ml-4 text-sm text-white">
+          <div >
+             <div className="overflow-hidden w-5 h-5"><img src="sg.jpg" alt="surajgsn" /></div>
+          </div>
+          <button>
+
+          </button>
         </div>
       </div>
     </div>
